@@ -1,0 +1,377 @@
+
+### /USERS/ADD
+POST http://127.0.0.1:3000/users/add
+Content-Type: application/json
+
+{
+	"password": "12sdfn34sdfa6",
+	"rols": "admin",
+	"email": "miguel@gmail.com",
+	"phone": "656555222",
+	"university_degree": "Psicología UAM",
+	"experience": "15 años",
+	"ID_city": 1,
+	"gender": "hombre",
+	"birthday": "1990-03-07"
+}
+
+### /USERS/PUT
+PUT http://127.0.0.1:3000/users/edit/5
+Content-Type: application/json
+
+{
+	"email": "jaimita@gmail.com",
+	"phone": "900111222",
+	"university_degree": "Psicología GRANADA",
+	"experience": "10 años"
+}
+
+### /USERS/GET
+GET http://127.0.0.1:3000/users/get/1
+Content-Type: application/json
+
+### /USERS/GET_LIST
+GET http://127.0.0.1:3000/users/list
+Content-Type: application/json
+
+### /USERS/DELETE
+DELETE http://127.0.0.1:3000/users/delete/3
+Content-Type: application/json
+
+################################
+
+### /USERS/LOGIN
+POST http://127.0.0.1:3000/users/login
+Content-Type: application/json
+
+{
+	"user": "carla@gmail.com",
+	"password": "123456"
+}
+
+##########################################
+
+### /USERS/CHANGE_PASSWORD
+PUT http://127.0.0.1:3000/users/change_password
+Content-Type: application/json
+
+{
+	"password": "123456"
+}
+
+
+### /USERS/RECOVERY_PASSWORD
+GET http://127.0.0.1:3000/users/recovery_password
+Content-Type: application/json
+
+{
+	"password": "123456"
+}
+
+################################
+
+### /COUNTRY/ADD
+POST http://127.0.0.1:3000/country/add
+Content-Type: application/json
+
+{
+	"country": "ARGENTINA"
+}
+
+### /COUNTRY/EDIT
+PUT http://127.0.0.1:3000/country/edit/1
+Content-Type: application/json
+
+{
+	"country": "España"
+}
+
+### /COUNTRY/GET
+GET http://127.0.0.1:3000/country/list
+Content-Type: application/json
+
+################################
+
+### /CITY/ADD
+POST http://127.0.0.1:3000/city/add
+Content-Type: application/json
+
+{
+	"ID_country":1,
+	"city": "Granada"
+}
+
+### /CITY/EDIT
+PUT http://127.0.0.1:3000/city/edit/2
+Content-Type: application/json
+
+{
+	"ID_country":1,
+	"city": "G"
+}
+
+### /CITY/GET
+GET http://127.0.0.1:3000/city/select/1
+Content-Type: application/json
+
+{
+	"ID_country":1,
+	"city": "Barcelona"
+}
+
+### /CITY/LISTADO <-- xxx
+GET http://127.0.0.1:3000/city/list
+Content-Type: application/json
+
+
+
+################################
+
+### /LEAD/ADD
+POST http://127.0.0.1:3000/leads/add
+Content-Type: application/json
+
+{
+	"name": "Jose",
+	"ID_user": "6",
+	"phone": "900777444",
+	"email_lead": "dfasdk.com"
+}
+
+### /LEAD/EDIT <-- XXXX
+PUT http://127.0.0.1:3000/leads/edit/12
+Content-Type: application/json
+
+{
+	"name": "Miguel",
+	"ID_user": "6",
+	"phone": "900777444",
+	"email_lead": "dfasdk.com"
+}
+
+### /LEAD/DELETE
+DELETE http://127.0.0.1:3000/leads/delete/12
+Content-Type: application/json
+
+### /LEAD/GET
+GET http://127.0.0.1:3000/leads/select/10
+Content-Type: application/json
+
+### /LEAD/LIST
+GET http://127.0.0.1:3000/leads/list
+Content-Type: application/json
+
+################################
+
+### /PAGES/ADD <-- XXXX - XXXX - XXXX
+POST http://127.0.0.1:3000/pages/add
+Content-Type: application/json
+
+{
+	"ID_user": "5",
+	"title": "Esta es una página de prueba"
+}
+
+### /PAGES/EDIT <-- XXXX
+PUT http://127.0.0.1:3000/pages/edit/1
+Content-Type: application/json
+
+{
+	"title": "Esta es una página de PRUEBA"
+}
+
+### /PAGES/DELETE <-- XXXX
+DELETE http://127.0.0.1:3000/pages/delete/3
+Content-Type: application/json
+
+{
+	"ID_user": "3",
+	"title": "Esta es una página de prueba"
+}
+
+### /PAGES/GET
+GET http://127.0.0.1:3000/pages/select/1
+Content-Type: application/json
+
+{
+	"ID_user": "3",
+	"title": "Esta es una página de prueba"
+}
+
+### /PAGES/LIST
+GET http://127.0.0.1:3000/pages/list
+Content-Type: application/json
+
+################################
+
+### /POST/ADD
+POST http://127.0.0.1:3000/post/add
+Content-Type: application/json
+
+{
+	"title": "SEGUNDO POST NODE.JS",
+	"author": "Pepito"
+}
+
+### /POST/EDIT
+PUT http://127.0.0.1:3000/post/edit/1
+Content-Type: application/json
+
+{
+	"title": "POST DE PRUEBA EN NODE.JS",
+	"author": "Pepito"
+}
+
+### /POST/DELETE
+DELETE http://127.0.0.1:3000/post/delete/1
+Content-Type: application/json
+
+{
+	"title": "POST DE PRUEBA EN NODE.JS",
+	"author": "Pepito"
+}
+
+### /POST/GET
+GET http://127.0.0.1:3000/post/select/1
+Content-Type: application/json
+
+{
+	"title": "POST DE PRUEBA EN NODE.JS",
+	"author": "Pepito"
+}
+
+### /POST/LIST
+GET http://127.0.0.1:3000/post/list
+Content-Type: application/json
+
+################################
+
+### /CATEGORIES/ADD
+POST http://127.0.0.1:3000/categories/add
+Content-Type: application/json
+
+{
+	"title": "CATEGORÍA DE PRUEBA EN NODE.JS"
+}
+
+### /CATEGORIES/EDIT
+PUT http://127.0.0.1:3000/categories/edit/7
+Content-Type: application/json
+
+{
+	"ID":"5",
+	"title": "CATEGORÍASSS"
+}
+
+### /CATEGORIES/DELETE
+DELETE http://127.0.0.1:3000/categories/delete/3
+Content-Type: application/json
+
+{
+	"ID":"5",
+	"title": "CATEGORÍASSS"
+}
+
+### /CATEGORIES/GET
+GET http://127.0.0.1:3000/categories/select/1
+Content-Type: application/json
+
+
+
+### /CATEGORIES/LIST
+GET http://127.0.0.1:3000/categories/list
+Content-Type: application/json
+
+################################
+
+### /POST_CATEGORY/ADD
+POST http://127.0.0.1:3000/post_category/add
+Content-Type: application/json
+
+{
+	"ID_post":"8",
+	"ID_category": "9"
+}
+
+### /POST_CATEGORY/EDIT
+PUT http://127.0.0.1:3000/post_category/edit/1
+Content-Type: application/json
+
+{
+	"ID_post":"3",
+	"ID_category": "4"
+}
+
+### /POST_CATEGORY/DELETE
+DELETE http://127.0.0.1:3000/post_category/delete/2
+Content-Type: application/json
+
+
+
+### /POST_CATEGORY/GET
+GET http://127.0.0.1:3000/post_category/select/1
+Content-Type: application/json
+
+### /POST_CATEGORY/LIST
+GET http://127.0.0.1:3000/post_category/list
+Content-Type: application/json
+
+################################
+
+### /MENU/ADD
+POST http://127.0.0.1:3000/menu/add
+Content-Type: application/json
+
+{
+	"html":"html 4"
+}
+
+### /MENU/EDIT
+PUT http://127.0.0.1:3000/menu/edit/1
+Content-Type: application/json
+
+{
+	"html":"SOY el HTML"
+}
+
+### /MENU/DELETE
+DELETE http://127.0.0.1:3000/menu/delete/2
+Content-Type: application/json
+
+### /MENU/GET
+GET http://127.0.0.1:3000/menu/select/1
+Content-Type: application/json
+
+### /MENU/LIST
+GET http://127.0.0.1:3000/menu/list
+Content-Type: application/json
+
+################################
+
+### /CONFIG/ADD
+POST http://127.0.0.1:3000/config/add
+Content-Type: application/json
+
+{
+	"clave":"Hola clave 2"
+}
+
+### /CONFIG/EDIT
+PUT http://127.0.0.1:3000/config/edit/1
+Content-Type: application/json
+
+{
+	"clave":"Holaaaa soy una clave"
+}
+
+### /CONFIG/DELETE
+DELETE http://127.0.0.1:3000/config/delete/1
+Content-Type: application/json
+
+### /CONFIG/GET
+GET http://127.0.0.1:3000/config/select/1
+Content-Type: application/json
+
+### /CONFIG/LIST
+GET http://127.0.0.1:3000/config/list
+Content-Type: application/json
