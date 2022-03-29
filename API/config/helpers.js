@@ -1,5 +1,0 @@
-
-
-function required(array, obj){
-
-}
