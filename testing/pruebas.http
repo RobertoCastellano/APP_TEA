@@ -1,0 +1,394 @@
+
+### /USERS/ADD
+POST http://127.0.0.1:3005/users/add
+Content-Type: application/json
+
+{
+	"name": "Roberto",
+	"password": "1212129821982",
+	"rols": "admin",
+	"email": "roberto@gmail.com",
+	"phone": "656555222",
+	"university_degree": "Psicología UAM",
+	"experience": "15 años",
+	"ID_city": 1,
+	"gender": "hombre",
+	"birthday": "1990-03-07"
+}
+
+### /USERS/PUT
+PUT http://127.0.0.1:3005/users/edit/14
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+{
+	"name": "Julia",
+	"surname": "Costa",
+	"email": "",
+	"phone": "",
+	"university_degree": "",
+	"experience": ""
+}
+
+### /USERS/SELECT
+GET http://127.0.0.1:3005/users/get/20
+Content-Type: application/json
+
+### /USERS/GET_LIST
+GET http://127.0.0.1:3005/users/list
+Content-Type: application/json
+
+### /USERS/DELETE
+DELETE http://127.0.0.1:3005/users/delete/17
+Content-Type: application/json
+token:323d41c0c0dffdd999f1c1253ddd881e8d690089
+
+
+################################
+
+### /USERS/LOGIN
+POST http://127.0.0.1:3005/users/login
+Content-Type: application/json
+
+{
+	"user": "julia@gmail.com",
+	"password": "123456"
+}
+
+##########################################
+
+### /USERS/CHANGE_PASSWORD
+PUT http://127.0.0.1:3005/users/change_password
+Content-Type: application/json
+
+{
+	"password": "123456"
+}
+
+
+### /USERS/RECOVERY_PASSWORD
+GET http://127.0.0.1:3005/users/recovery_password
+Content-Type: application/json
+
+{
+	"password": "123456"
+}
+
+################################
+
+### /COUNTRY/ADD
+POST http://127.0.0.1:3005/country/add
+Content-Type: application/json
+
+{
+	"country": "VENEZUELA"
+}
+
+### /COUNTRY/EDIT
+PUT http://127.0.0.1:3005/country/edit/4
+Content-Type: application/json
+token:455740e828d66bd68d2326b8c4e647e737353514
+
+{
+	"country": "ESPAÑA"
+}
+
+### /COUNTRY/SELECT
+GET http://127.0.0.1:3005/country/select/2
+Content-Type: application/json
+
+### /COUNTRY/GET
+GET http://127.0.0.1:3005/country/list
+Content-Type: application/json
+
+################################
+
+### /CITY/ADD
+POST http://127.0.0.1:3005/city/add
+Content-Type: application/json
+
+{
+	"ID_country":1,
+	"city": "Valencia"
+}
+
+### /CITY/EDIT
+PUT http://127.0.0.1:3005/city/edit/2
+Content-Type: application/json
+
+{
+	"ID_country":1,
+	"city": "G"
+}
+
+### /CITY/SELECT
+GET http://127.0.0.1:3005/city/select/2
+Content-Type: application/json
+
+### /CITY/LISTADO <-- xxx
+GET http://127.0.0.1:3005/city/list
+Content-Type: application/json
+
+
+
+################################
+
+### /LEAD/ADD
+POST http://127.0.0.1:3005/leads/add
+Content-Type: application/json
+
+{
+	"ID_user": "6",
+	"name": "Jose",
+	"surname":"Pérez",
+	"phone": "900777444",
+	"email_lead": "dfasdk.com",
+	"texto": "Hola"
+}
+
+### /LEAD/EDIT <-- XXXX
+PUT http://127.0.0.1:3005/leads/edit/15
+Content-Type: application/json
+
+{
+	"ID_user": "20",
+	"name": "Miguel",
+	"surname":"Pérez",
+	"phone": "900777444",
+	"email_lead": "dfasdk.com",
+	"texto": "Hola"
+}
+
+### /LEAD/DELETE
+DELETE http://127.0.0.1:3005/leads/delete/16
+Content-Type: application/json
+
+### /LEAD/GET
+GET http://127.0.0.1:3005/leads/select/17
+Content-Type: application/json
+
+### /LEAD/LIST
+GET http://127.0.0.1:3005/leads/list
+Content-Type: application/json
+
+################################
+
+### /PAGES/ADD <-- XXXX - XXXX - XXXX
+POST http://127.0.0.1:3005/pages/add
+Content-Type: application/json
+
+{
+	"ID_user": "20",
+	"title": "Blog",
+	"content": ""
+}
+
+### /PAGES/EDIT <-- XXXX
+PUT http://127.0.0.1:3005/pages/edit/20
+Content-Type: application/json
+
+{
+	"title": "Esta es una página de PRUEBAAAAA"
+}
+
+### /PAGES/DELETE <-- XXXX
+DELETE http://127.0.0.1:3005/pages/delete/3
+Content-Type: application/json
+
+{
+	"ID_user": "3",
+	"title": "Esta es una página de prueba"
+}
+
+### /PAGES/SELECT
+GET http://127.0.0.1:3005/pages/select/16
+Content-Type: application/json
+
+
+### /PAGES/LIST
+GET http://127.0.0.1:3005/pages/list
+Content-Type: application/json
+
+################################
+
+### /POST/ADD
+POST http://127.0.0.1:3005/post/add
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+{
+	"title": "SÉPTIMO POST NODE.JS",
+	"author": "Pepito",
+	"add_content":"Lorem ipsum dolor sit amet"
+}
+
+### /POST/EDIT
+PUT http://127.0.0.1:3005/post/edit/3
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+{
+	"title": "PRIMER POST DE PRUEBA EN NODE.JS",
+	"author": "Pepito",
+	"add_content": "Contenido del POST...."
+}
+
+### /POST/DELETE
+DELETE http://127.0.0.1:3005/post/delete/1
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+
+
+### /POST/SELECT
+GET http://127.0.0.1:3005/post/select/1
+Content-Type: application/json
+
+
+
+### /POST/LIST
+GET http://127.0.0.1:3005/post/list
+Content-Type: application/json
+
+################################
+
+### /CATEGORIES/ADD
+POST http://127.0.0.1:3005/categories/add
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+{
+	"title": "CATEGORÍA 4 DE PRUEBA EN NODE.JS"
+}
+
+### /CATEGORIES/EDIT
+PUT http://127.0.0.1:3005/categories/edit/4
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+{
+	"title": "CATEG"
+}
+
+### /CATEGORIES/DELETE
+DELETE http://127.0.0.1:3005/categories/delete/4
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+{
+	"title": "CATEGORÍASSS"
+}
+
+### /CATEGORIES/GET
+GET http://127.0.0.1:3005/categories/select/1
+Content-Type: application/json
+
+
+
+### /CATEGORIES/LIST
+GET http://127.0.0.1:3005/categories/list
+Content-Type: application/json
+
+################################
+
+### /POST_CATEGORY/ADD
+POST http://127.0.0.1:3005/post_category/add
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+{
+	"ID_post":"6",
+	"ID_category": "2"
+}
+
+### /POST_CATEGORY/EDIT
+PUT http://127.0.0.1:3005/post_category/edit/6
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+{
+	"ID_post":"3",
+	"ID_category": "1"
+}
+
+### /POST_CATEGORY/DELETE
+DELETE http://127.0.0.1:3005/post_category/delete/2/6
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+
+
+### /POST_CATEGORY/GET
+GET http://127.0.0.1:3005/post_category/select/2
+Content-Type: application/json
+
+### /POST_CATEGORY/LIST
+GET http://127.0.0.1:3005/post_category/list
+Content-Type: application/json
+
+################################
+
+### /MENU/ADD
+POST http://127.0.0.1:3005/menu/add
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+{
+	"html":"html 4"
+}
+
+### /MENU/EDIT
+PUT http://127.0.0.1:3005/menu/edit/2
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+{
+	"html":"SOY el HTML"
+}
+
+### /MENU/DELETE
+DELETE http://127.0.0.1:3005/menu/delete/2
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+### /MENU/GET
+GET http://127.0.0.1:3005/menu/select/2
+Content-Type: application/json
+
+### /MENU/LIST
+GET http://127.0.0.1:3005/menu/list
+Content-Type: application/json
+
+################################
+
+### /CONFIG/ADD
+POST http://127.0.0.1:3005/config/add
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+{
+	"clave":"Hola clave 4",
+	"content": "Lorem ipsum dolor sit amet, consectetur"
+}
+
+### /CONFIG/EDIT
+PUT http://127.0.0.1:3005/config/edit/2
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+{
+	"clave":"Holaaaa soy una clave"
+}
+
+### /CONFIG/DELETE
+DELETE http://127.0.0.1:3005/config/delete/1
+Content-Type: application/json
+token:ccafeff5e43c323e80a50fc9ee99d57381f24b77
+
+### /CONFIG/GET
+GET http://127.0.0.1:3005/config/select/2
+Content-Type: application/json
+
+### /CONFIG/LIST
+GET http://127.0.0.1:3005/config/list
+Content-Type: application/json
